@@ -19,11 +19,13 @@
                         </div>
                         <div class="cargo-funcionario-painel" id="cargo-funcionario-painel">
                             <p class="subtitle">Cargo</p>
-                            <p class="cargo-funcionario-painel-text" id="cargo-funcionario-painel-text">Teste</p>
+                            <div class="cargo-painel-area" id="cargo-painel-area">
+
+                            </div>
                         </div>
                         <div class="funcoes-funcionario-painel" id="funcoes-funcionario-painel">
                             <p class="subtitle">Funcões</p>
-                            <div class="funcoes-painel-area">
+                            <div class="funcoes-painel-area" id="funcoes-painel-area">
                                 <div class="funcao-box">Teste de Função</div>
                                 <div class="funcao-box">Teste de Função 2</div>
                             </div>
@@ -38,9 +40,8 @@
                         </div>
                         <div class="empresa-funcionario-painel" id="empresa-funcionario-painel">
                             <p class="subtitle">Empresas em que atua</p>
-                            <div class="empresa-painel-area">
-                                <div class="empresa-box">Teste de Empresa</div>
-                                <div class="empresa-box">Teste de Empresa 2</div>
+                            <div class="empresa-painel-area" id="empresa-painel-area">
+
                             </div>
                         </div>
                     </li>
@@ -70,16 +71,19 @@
                     </li>
                     <li class="painel-dados-funcionario-data-li middle-li">
                         <div class="painel-dados-funcionario-grafico-radar" id="painel-dados-funcionario-grafico-radar">
-                            
+                            <canvas id="graficoRadar"></canvas>
                         </div>
                     </li>
                     <li class="end-li">
-
+                        <div class="painel-dados-funcionario-grafico-barras" id="painel-dados-funcionario-grafico-barras">
+                            <canvas id="graficoBarras"></canvas>
+                        </div>
                     </li>
                 </ul>
             </section>
         </center>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./app.js" type="module"></script>
 </body>
 </html>
