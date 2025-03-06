@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #fffafa;
+}
+
+/* Painel com dados do Funcionário */
+
+.painel-dados-funcionario{
+    width: fit-content;
+    height: fit-content;
+    border: solid #323232 1px;
+    border-radius: 14px;
+    padding: 2rem;
+    text-align: left;
+}
+
+.painel-dados-funcionario ul{
+    list-style: none;
+    display: inline-flex;
+    margin-bottom: 1rem;
+}
+
+.painel-dados-funcionario ul .first-li{
+    text-align: left;
+    width: 200px;
+}
+
+.painel-dados-funcionario ul .middle-li{
+    text-align: left;
+    width: 350px;
+}
+
+.painel-dados-funcionario ul li{
+    margin-right: 2rem;
+}
+
+.painel-dados-funcionario ul .foto-funcionario-painel{
+    border-radius: 14px;
+    background-color: #323232;
+    width: 150px;
+    height: 180px;
+    background-image: url(./../img/profile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 1rem;
+}
+
+.painel-dados-funcionario ul .subtitle{
+    font-weight: bolder;
+    font-size: 8pt;
+    margin-top: .5rem;
+}
+
+.painel-dados-funcionario ul .funcoes-painel-area{
+    display: inline-flex;
+}
+
+.painel-dados-funcionario ul .funcoes-painel-area .funcao-box{
+    font-size: 9pt;
+    background-color: #323232;
+    font-weight: bolder;
+    border-radius: 30px;
+    color: #fff;
+    user-select: none;
+    margin: .2rem;
+    padding: .4rem;
+}
+
+.painel-dados-funcionario ul .empresa-painel-area{
+    display: inline-flex;
+}
+
+.painel-dados-funcionario ul .empresa-painel-area .empresa-box{
+    font-size: 9pt;
+    background-color: #323232;
+    font-weight: bolder;
+    border-radius: 30px;
+    color: #fff;
+    user-select: none;
+    margin: .2rem;
+    padding: .4rem;
+}
+
+.painel-dados-funcionario ul .painel-dados-funcionario-nota-box{
+    width: fit-content;
+    height: fit-content;
+    padding: 4rem;
+    border-radius: 8px;
+    border: solid #323232 1px;
+    text-align: center;
+}
+
+.painel-dados-funcionario ul .painel-dados-funcionario-nota-box .nota-text{
+    font-weight: bolder;
+    font-size: 38pt;
+}
+
+.painel-dados-funcionario ul .painel-dados-funcionario-nota-box .subtitle-nota{
+    width: 180px;
+    font-size: 10pt;
+    margin-top: .5rem;
+}
+
+.painel-dados-funcionario .dados-funcionario-painel-box{
+    padding: 1rem;
+    border-radius: 14px;
+    border: solid #323232 1px;
+}
+
+/* ------------------------------ */

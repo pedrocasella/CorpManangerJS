@@ -1,0 +1,792 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #fffafa;
+}
+
+/* Menu Lateral */
+.aside-left{
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    left: 0;
+    border-radius: 0px 14px 14px 0px;
+    border: solid #323232 1px;
+    z-index: 4;
+    background-color: #fffafa;
+}
+
+/* ----------- */
+
+/* Main */
+
+.main{
+    position: absolute;
+    right: 0;
+    width: 80%;
+
+}
+
+/* --- */
+
+/* Cadastro de Competências Area */
+.cadastro-competencias-area{
+    display: block;
+}
+
+.cadastro-competencias-area .ul-title{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.cadastro-competencias-area .cadastro-competencias-return-btn{
+    width: 35px;
+    height: 35px ;
+    cursor: pointer;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: .3rem;
+    margin-right: .5rem;
+    background-image: url(./../img/return.png);
+}
+
+.cadastro-competencias-area h2{
+    margin-top: .5rem;
+}
+
+.cadastro-competencias-area .ul-btn{
+    list-style: none;
+    display: inline-flex;
+    padding: 2rem;
+}
+
+.cadastro-competencias-area .ul-btn li{
+    margin-right: 1rem;
+}
+
+.cadastro-competencias-area .ul-btn input{
+    padding: 1rem;
+    border-radius: 8px;
+    border: solid #323232 1px;
+    width: 180px;
+}
+
+.cadastro-competencias-area .ul-btn .cadastrar-competencia-btn{
+    padding: 1rem;
+    border-radius: 8px;
+    width: fit-content;
+    user-select: none;
+    background-color: #788a72;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cadastro-competencias-area .competencias-lista-area{
+    padding: 2rem;
+}
+
+.cadastro-competencias-area .competencia-box{
+    width: fit-content;
+    padding: 1.5rem;
+    border-radius: 14px;
+    border: solid #323232 1px;
+    margin-bottom: 1rem;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.07); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.07);
+}
+
+.cadastro-competencias-area .competencia-box .competencia-ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+.cadastro-competencias-area .competencia-box .competencia-ul li{
+    margin-right: 1rem;
+}
+
+.cadastro-competencias-area .competencia-box .competencia-ul .nome-competencia{
+    width: 180px;
+    font-weight: bolder;
+    margin-top: .3rem;
+}
+
+.cadastro-competencias-area .competencia-box .competencia-ul .remover-competencia-btn{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 45, 45);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-image: url(./../img/delete.png);
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* ----------------------------- */
+
+/* Cadastro de Departamentos e Setores Area */
+.cadastro-setor-departamento-area{
+    display: none;
+}
+
+.cadastro-setor-departamento-area .btn-ul{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    list-style: none;
+    display: inline-flex;
+}
+
+.cadastro-setor-departamento-area .btn-ul li{
+    margin-right: .6rem;
+}
+
+.cadastro-setor-departamento-area .btn-ul .criar-departamento-btn{
+    background-color: #788a72;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cadastro-setor-departamento-area .btn-ul .cancelar-criar-departamento-btn{
+    background-color: #323232;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cadastro-setor-departamento-area .ul-btn{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    list-style: none;
+    display: inline-flex;
+}
+
+.cadastro-setor-departamento-area .ul-btn li{
+    margin-right: .6rem;
+}
+
+.cadastro-setor-departamento-area .ul-btn .cadastrar-setor-departamento-btn{
+    background-color: #788a72;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cadastro-setor-departamento-area .ul-btn .cancelar-cadastrar-setor-departamento-btn{
+    background-color: #323232;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cadastro-setor-departamento-area .ul-title{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.cadastro-setor-departamento-area .cadastro-setor-departamento-return-btn{
+    width: 35px;
+    height: 35px ;
+    cursor: pointer;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: .3rem;
+    margin-right: .5rem;
+    background-image: url(./../img/return.png);
+}
+
+.cadastro-setor-departamento-area h2{
+    margin-top: .5rem;
+}
+
+.cadastro-setor-departamento-area .title{
+    font-size: 9pt;
+    font-weight: bolder;
+    margin-bottom: .5rem;
+}
+
+.cadastro-setor-departamento-area .cadastro-departamento-ul{
+    list-style: none;
+    display: inline-flex;
+    padding: 2rem;
+}
+
+.cadastro-setor-departamento-area .cadastro-departamento-ul .cadastro-departamento-li{
+    margin-right: 1rem;
+}
+
+.cadastro-setor-departamento-area .cadastro-departamento-ul .cadastrar-foto-departamento{
+    width: 120px;
+    height: 120px;
+    background-color: #323232;
+    cursor: pointer;
+    margin-top: .5rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./../img/profile.png);
+    border-radius: 50%;
+}
+
+.cadastro-setor-departamento-area .cadastrar-departamento-info-ul{
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.cadastro-setor-departamento-area .cadastrar-departamento-info-ul li{
+    margin: .5rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-departamento-info-ul input{
+    padding: 1rem;
+    border-radius: 8px;
+    border: solid #323232 1px;
+    width: 180px;
+}
+
+.cadastro-setor-departamento-area .cadastrar-departamento-info-ul .cadastro-departamento-li{
+    margin-right: 1rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div{
+    padding: 2rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div h3{
+    margin-bottom: 1rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .cadastrar-setor-ul{
+    list-style: none;
+    display: inline-flex;
+    border-radius: 12px;
+    border: solid #323232 1px;
+    padding: 2rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .cadastrar-setor-ul li{
+    margin-right: .5rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .cadastrar-setor-ul .cadastrar-foto-setor{
+    width: 70px;
+    height: 70px;
+    background-color: #323232;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./../img/profile.png);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .cadastrar-setor-ul input{
+    border: solid #323232 1px;
+    border-radius: 4px;
+    padding: .5rem;
+    margin-top: 1rem;
+    width: 150px;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .cadastrar-setor-ul .adicionar-setor-btn{
+    width: fit-content;
+    padding: .5rem;
+    background-color: #788a72;
+    font-weight: bolder;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .lista-setores-area{
+    margin-top: 1rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .ul-setor{
+    list-style: none;
+    display: inline-flex;
+    border-bottom: solid #323232 1px;
+    padding: 1rem;
+    width: 300px;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .ul-setor li{
+    margin-right: 1rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .ul-setor .foto-setor-lista-area{
+    width: 40px;
+    height: 40px;
+    background-color: #323232;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./../img/profile.png);
+    border-radius: 50%;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .ul-setor .lista-cadastro-nome-setor{
+    font-weight: bolder;
+    width: 180px;
+    margin-top: .5rem;
+}
+
+.cadastro-setor-departamento-area .cadastrar-setor-div .ul-setor .remove-lista-cadastro-setor{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(254, 43, 43);
+    background-position: center;
+    background-size: 50%;
+    background-image: url(./../img/delete.png);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-top: .5rem;
+}
+
+/*-----------------------------------------*/
+
+/* Cadastro de Empresas Area */
+.cadastro-empresa-area{
+    display: none;
+}
+
+.cadastro-empresa-area .ul-btn{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    list-style: none;
+    display: inline-flex;
+}
+
+.cadastro-empresa-area .ul-btn li{
+    margin-right: .6rem;
+}
+
+.cadastro-empresa-area .ul-btn .cadastrar-empresa-btn{
+    background-color: #788a72;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cadastro-empresa-area .ul-btn .cancelar-cadastrar-empresa-btn{
+    background-color: #323232;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cadastro-empresa-area .ul-title{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.cadastro-empresa-area .cadastro-empresa-return-btn{
+    width: 35px;
+    height: 35px ;
+    cursor: pointer;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: .3rem;
+    margin-right: .5rem;
+    background-image: url(./../img/return.png);
+}
+
+.cadastro-empresa-area h2{
+    margin-top: .5rem;
+}
+
+.cadastro-empresa-area .title{
+    font-size: 9pt;
+    font-weight: bolder;
+    margin-bottom: .5rem;
+}
+
+.cadastro-empresa-area .cadastro-empresa-ul{
+    list-style: none;
+    display: inline-flex;
+    padding: 2rem;
+}
+
+.cadastro-empresa-area .cadastro-empresa-ul .cadastro-empresa-li{
+    margin-right: 1rem;
+}
+
+.cadastro-empresa-area .cadastro-empresa-ul .cadastrar-foto-empresa{
+    width: 120px;
+    height: 120px;
+    background-color: #323232;
+    cursor: pointer;
+    margin-top: .5rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./../img/profile.png);
+    border-radius: 50%;
+}
+
+.cadastro-empresa-area .cadastrar-info-empresa-ul{
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.cadastro-empresa-area .cadastrar-info-empresa-ul li{
+    margin: .5rem;
+}
+
+.cadastro-empresa-area .cadastrar-info-empresa-ul input{
+    padding: 1rem;
+    border-radius: 8px;
+    border: solid #323232 1px;
+    width: 180px;
+}
+
+.cadastro-empresa-area .endereco-empresa-area{
+    padding: 2rem;
+}
+
+.cadastro-empresa-area .endereco-empresa-area h3{
+    margin-bottom: 1rem;
+}
+
+.cadastro-empresa-area .endereco-empresa-area input{
+    padding: 1rem;
+    border-radius: 8px;
+    border: solid #323232 1px;
+    width: 180px;
+    margin: .3rem;
+}
+
+.cadastro-empresa-area .endereco-empresa-area button{
+    padding: .5rem;
+    border-radius: 8px;
+    background-color: #323232;
+    border: solid #323232 1px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ------------------------- */
+
+/* Cadastro de Funcionário Area */
+.cadastro-funcionario-area{
+    display: none;
+}
+
+.cadastro-funcionario-area .ul-btn{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    list-style: none;
+    display: inline-flex;
+}
+
+.cadastro-funcionario-area .ul-btn li{
+    margin-right: .6rem;
+}
+
+.cadastro-funcionario-area .ul-btn .cadastrar-funcionario-btn{
+    background-color: #788a72;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cadastro-funcionario-area .ul-btn .cancelar-cadastrar-funcionario-btn{
+    background-color: #323232;
+    padding: 1rem;
+    color: #fff;
+    font-weight: bolder;
+    user-select: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cadastro-funcionario-area .ul-title{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.cadastro-funcionario-area .cadastro-funcionario-return-btn{
+    width: 35px;
+    height: 35px ;
+    cursor: pointer;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: .3rem;
+    margin-right: .5rem;
+    background-image: url(./../img/return.png);
+}
+
+.cadastro-funcionario-area h2{
+    margin-top: .5rem;
+}
+
+.cadastro-funcionario-area .title{
+    font-size: 9pt;
+    font-weight: bolder;
+    margin-bottom: .5rem;
+}
+
+.cadastro-funcionario-area .cadastro-funcionario-ul{
+    list-style: none;
+    display: inline-flex;
+    padding: 2rem;
+}
+
+.cadastro-funcionario-area .cadastro-funcionario-ul .cadastro-funcionario-li{
+    margin-left: 1rem;
+}
+
+.cadastro-funcionario-area .cadastrar-foto-funcionario{
+    width: 150px;
+    height: 170px;
+    border-radius: 8px;
+    background-color: #323232;
+    cursor: pointer;
+    margin-top: .5rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./../img/profile.png);
+}
+
+.cadastro-funcionario-area .cadastrar-info-funcionario-ul{
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.cadastro-funcionario-area .cadastrar-info-funcionario-ul li{
+    margin: .5rem;
+}
+
+.cadastro-funcionario-area .cadastrar-info-funcionario-ul input{
+    padding: 1rem;
+    border-radius: 8px;
+    border: solid #323232 1px;
+    width: 180px;
+}
+
+.cadastro-funcionario-area .cadastrar-info-funcionario-ul select{
+    padding: 1rem;
+    border-radius: 8px;
+    border: solid #323232 1px;
+    width: 215px;
+}
+
+.cadastro-funcionario-area .cadastro-funcoes-cargo-funcionario{
+    display: inline-flex;
+    margin-top: 2rem;
+}
+
+
+.cadastro-funcionario-area .cadastro-funcoes-cargo-funcionario input{
+    padding: .5rem;
+    border-radius: 8px;
+    border: solid #323232 1px;
+    width: 180px;
+    margin: .3rem;
+}
+
+.cadastro-funcionario-area .cadastro-funcoes-cargo-funcionario .circle-btn{
+    background-color: #323232;
+    border-radius: 50%;
+    user-select: none;
+    font-weight: bolder;
+    color: #fff;
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+.cadastro-funcionario-area .cadastro-funcoes-cargo-funcionario .cargos-area-modal{
+    margin-right: 4rem;
+}
+
+.cadastro-funcionario-area .cadastro-funcoes-cargo-funcionario .cargos-box-area{
+    display: inline-flex;
+    width: 373px;
+    flex-wrap: wrap
+}
+
+.cadastro-funcionario-area .cadastro-funcoes-cargo-funcionario .funcoes-box-area{
+    display: inline-flex;
+    width: 373px;
+    flex-wrap: wrap
+}
+
+.cadastro-funcionario-area .cadastro-funcoes-cargo-funcionario .cargos-area-modal .cargo-box{
+    padding: .5rem;
+    border-radius: 4px;
+    background-color: #323232;
+    font-size: 9pt;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bolder;
+    color: #fff;
+    margin: .3rem;
+    width: fit-content;
+}
+
+.cadastro-funcionario-area .cadastro-funcoes-cargo-funcionario .funcoes-area-modal .funcoes-box{
+    padding: .5rem;
+    border-radius: 4px;
+    background-color: #323232;
+    font-size: 9pt;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bolder;
+    color: #fff;
+    margin: .3rem;
+    width: fit-content;
+}
+
+.cadastro-funcionario-area .cadastro-atribuicoes-funcionario-area{
+    width: 90%;
+    border-radius: 14px;
+    padding: 2rem;
+    margin: 2rem 1rem 1rem 1rem;
+    background-color: #fff;
+    border: solid #323232 1px;
+}
+
+.cadastro-funcionario-area .cadastro-atribuicoes-funcionario-area h3{
+    margin-bottom: 1rem;
+}
+
+.cadastro-funcionario-area .cadastro-atribuicoes-funcionario-area .btn-ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+.cadastro-funcionario-area .cadastro-atribuicoes-funcionario-area textarea{
+    width: 250px;
+    border-radius: 4px;
+    border: solid #323232 1px;
+    padding: .5rem;
+}
+
+.cadastro-funcionario-area .cadastro-atribuicoes-funcionario-area .cadastrar-atribuicao-funcionario-btn{
+    background-color: #323232;
+    border-radius: 8px;
+    color: #fff;
+    width: fit-content;
+    padding: .5rem;
+    user-select: none;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: .3rem;
+}
+
+.cadastro-funcionario-area .cadastro-atribuicoes-funcionario-area .atribuicao-lista-area{
+    margin-top: 1rem;
+}
+
+.cadastro-funcionario-area .cadastro-atribuicoes-funcionario-area .atribuicao-lista-area .atribuicao-box{
+    width: 90%;
+    margin: .5rem;
+    border-radius: 8px;
+    padding: 1rem;
+    border: solid #323232 1px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.06); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.06);
+}
+
+.cadastro-funcionario-area .cadastro-atribuicoes-funcionario-area .atribuicao-lista-area .atribuicao-box .remove-atribuicao{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* background-color: rgb(250, 64, 64); */
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    /* background-image: url(./../img/delete.png); */
+    left: 80%;
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+
+.cadastro-funcionario-area .cadastro-salario-funcionario-modal{
+    padding: 2rem;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+.cadastro-funcionario-area .cadastro-salario-funcionario-modal ul{
+    list-style: none;
+    display: inline-flex;
+    margin-top: 1rem;
+}
+
+.cadastro-funcionario-area .cadastro-salario-funcionario-modal ul li{
+    margin-right: .5rem;
+}
+
+.cadastro-funcionario-area .cadastro-salario-funcionario-modal input{
+    padding: .5rem;
+    width: 100px;
+    border-radius: 8px;
+    border: solid #323232 1px;
+}
+
+.cadastro-funcionario-area .cadastro-salario-funcionario-modal select{
+    padding: .5rem;
+    width: fit-content;
+    border-radius: 8px;
+    border: solid #323232 1px;
+}
+
+/*-----------------------------*/

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Desempenho da Equipe - Admin</title>
+</head>
+<body>
+    <aside class="aside-left">
+
+    </aside>
+    <section class="main">
+        <section class="cadastro-competencias-area" id="cadastro-competencias-area">
+            <ul class="ul-title"> 
+                <li><div class="cadastro-competencias-return-btn" id="cadastro-competencias-return-btn"></div></li>
+                <li><h2>Cadastro de Competências</h2></li>
+            </ul><br>
+            <ul class="ul-btn">
+                <li><input type="text" placeholder="Nome da Competência" id="cadastrar-competencia-input"></li>
+                <li><div class="cadastrar-competencia-btn" id="cadastrar-competencia-btn">Adicionar</div></li>
+            </ul><br>
+            <div class="competencias-lista-area" id="competencias-lista-area">
+
+
+            </div>
+        </section>
+
+        <section class="cadastro-setor-departamento-area" id="cadastro-setor-departamento-area">
+            <ul class="btn-ul">
+                <li><div class="criar-departamento-btn" id="criar-departamento-btn">CRIAR</div></li>
+                <li><div class="cancelar-criar-departamento-btn" id="cancelar-criar-departamento-btn">CANCELAR</div></li>
+            </ul>
+            <ul class="ul-title"> 
+                <li><div class="cadastro-setor-departamento-return-btn" id="cadastro-setor-departamento-return-btn"></div></li>
+                <li><h2>Cadastro de Departamentos e Setores </h2></li>
+            </ul><br>
+            <ul class="cadastro-departamento-ul">
+                <li class="cadastro-departamento-li">
+                    <label for="cadastrar-foto-departamento-input"></label>
+                    <div class="cadastrar-foto-departamento" id="cadastrar-foto-departamento"></div>
+                    <input type="file" id="cadastrar-foto-departamento-input" style="display: none;">
+                </li>
+                <li class="cadastro-departamento-li">
+                    <ul class="cadastrar-departamento-info-ul">
+                        <li><p class="title">Nome do Departamento</p><input type="text" id="cadastrar-nome-departamento-input" placeholder="Nome do Departamento"></li>
+                        <li><p class="title">Sigla</p><input type="text" id="cadastrar-sigla-departamento-input" placeholder="Sigla"></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="cadastrar-setor-div">
+                <h3>Cadastro de Setor</h3>
+                <ul class="cadastrar-setor-ul">
+                    <li><label for="cadastrar-foto-setor-input"><div class="cadastrar-foto-setor"></div></label></li>
+                    <li><input type="text" placeholder="Nome do Setor" id="cadastrar-nome-setor-input"></li>
+                    <li><div class="adicionar-setor-btn" id="adicionar-setor-btn">Adicionar</div></li>
+                </ul>
+                <div class="lista-setores-area" id="lista-setores-area">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="cadastro-empresa-area" id="cadastro-empresa-area">
+            <ul class="ul-btn">
+                <li><div class="cadastrar-empresa-btn" id="cadastrar-empresa-btn">Cadastrar</div></li>
+                <li><div class="cancelar-cadastrar-empresa-btn" id="cancelar-cadastrar-empresa-btn">Cancelar</div></li>
+            </ul>
+            <ul class="ul-title"> 
+                <li><div class="cadastro-empresa-return-btn" id="cadastro-empresa-return-btn"></div></li>
+                <li><h2>Cadastro de Empresa</h2></li>
+            </ul><br>
+            <ul class="cadastro-empresa-ul">
+                <li class="cadastro-empresa-li">
+                    <label for="cadastrar-foto-empresa-input"><div class="cadastrar-foto-empresa" id="cadastrar-foto-empresa"></div></label>
+                    <input type="file" id="cadastrar-foto-empresa-input" style="display: none;">
+                </li>
+                <li class="cadastro-empresa-li">
+                    <ul class="cadastrar-info-empresa-ul">
+                        <li><p class="title">Nome da Empresa (Razão Social)</p><input type="text" placeholder="Nome da Empresa (Razão Social)" id="cadastrar-nome-empresa-input"></li>
+                        <li><p class="title">Nome Fantasia</p><input type="text" placeholder="Nome Fantasia" id="cadastrar-nome-fantasia-empresa-input"></li>
+                        <li><p class="title">CNPJ</p><input type="text" placeholder="CNPJ" id="cadastrar-cnpj-empresa-input"></li>
+                        <li><p class="title">Telefone</p><input type="text" placeholder="Telefone" id="cadastrar-telefone-empresa-input"></li>
+                        <li><p class="title">Celular</p><input type="text" placeholder="Celular" id="cadastrar-celular-empresa-input"></li>
+                        <li><p class="title">E-mail</p><input type="text" placeholder="E-mail" id="cadastrar-email-empresa-input"></li>
+
+                    </ul>
+                </li>
+            </ul>
+            <div class="container endereco-empresa-area">
+                <h3>Endereço da Empresa</h3>
+                <form id="cepForm">
+                    <input type="text" id="cep-empresa" name="cep-empresa" maxlength="9" placeholder="CEP" required>
+                    <button type="submit">Buscar</button>
+                    <button type="button" id="clearBtn">Limpar</button>
+                </form>
+                <div id="address">
+                    <input type="text" id="logradouro-empresa" placeholder="Rua">
+                    <input type="text" id="bairro-empresa" placeholder="Bairro">
+                    <input type="text" id="localidade-empresa" placeholder="Cidade">
+                    <input type="text" id="uf-empresa" placeholder="Estado">
+                    <input type="text" id="numero-empresa" placeholder="Número da Casa, Apartamento, Loja, Etc...">
+                    <input type="text" id="complemento-empresa" placeholder="Complemento (Opcional)">
+                    <input type="text" id="ponto-referencia-empresa" placeholder="Ponto de Referência (Opcional)">
+                </div>
+            </div>
+        </section>
+
+        <section class="cadastro-funcionario-area" id="cadastro-funcionario-area">
+            <ul class="ul-btn">
+                <li><div class="cadastrar-funcionario-btn" id="cadastrar-funcionario-btn">CADASTRAR</div></li>
+                <li><div class="cancelar-cadastrar-funcionario-btn" id="cancelar-cadastrar-funcionario-btn">CANCELAR</div></li>
+            </ul>
+            <ul class="ul-title">
+                <li><div class="cadastro-funcionario-return-btn" id="cadastro-funcionario-return-btn"></div></li>
+                <li><h2>Cadastro de Funcionário</h2></li>
+            </ul><br>
+            
+            <ul class="cadastro-funcionario-ul">
+                <li class="cadastro-funcionario-li">
+                    <label for="cadastrar-foto-funcionario-input"><div class="cadastrar-foto-funcionario" id="cadastrar-foto-funcionario"></div></label>
+                    <input type="file" id="cadastrar-foto-funcionario-input" style="display: none;">
+                </li>
+                <li class="cadastro-funcionario-li">
+                    <ul class="cadastrar-info-funcionario-ul">
+                        <li><p class="title">Nome Completo</p><input type="text" placeholder="Nome Completo" class="cadastrar-nome-funcionario-input" id="cadastrar-nome-funcionario-input"></li>
+                        <li><p class="title">Apelido</p><input type="text" placeholder="Apelido" class="cadastrar-apelido-funcionario-input" id="cadastrar-apelido-funcionario-input"></li>
+                        <li><p class="title">Data de Nascimento</p><input type="date" class="cadastrar-nascimento-funcionario-input" id="cadastrar-nascimento-funcionario-input"></li>
+                        <li><p class="title">CPF</p><input type="text" placeholder="CPF" class="cadastrar-cpf-funcionario-input" id="cadastrar-cpf-funcionario-input"></li>
+                        <li><p class="title">E-mail</p><input type="text" placeholder="E-mail" class="cadastrar-email-funcionario-input" id="cadastrar-email-funcionario-input"></li>
+                        <li><p class="title">Celular</p><input type="text" placeholder="Celular" class="cadastrar-celular-funcionario-input" id="cadastrar-celular-funcionario-input"></li>
+                        <li><p class="title">PIS</p><input type="text" placeholder="PIS" class="cadastrar-pis-funcionario-input" id="cadastrar-pis-funcionario-input"></li>
+                        <li>
+                            <p class="title">Estado Civil</p>
+                            <select name="" id="cadastrar-estado-civil-funcionario-input">
+                                <option value="Solteiro(a)">Solteiro(a)</option>
+                                <option value="Casado(a)">Casado(a)</option>
+                                <option value="Separado(a)">Separado(a)</option>
+                                <option value="Viúvo(a)">Viúvo(a)</option>           
+                            </select>
+                        </li>
+                        <li><p class="title">Data de Admissão</p><input type="date" class="cadastrar-data-admissao-funcionario-input" id="cadastrar-data-admissao-funcionario-input"></li>
+                        <li><p class="title">Departamento</p><select name="" id="cadastrar-departamento-funcionario-input"><option value="null">--Selecione um Departamento--</option></select></li>
+                        <li><p class="title">Setor</p><select name="" id="cadastrar-setor-funcionario-input"><option value="null">--Selecione um Setor--</option></select></li>
+                        <li><p class="title">Tag</p><input type="text" placeholder="Tag" class="cadastrar-tag-funcionario-input" id="cadastrar-tag-funcionario-input"></li>
+                    </ul>
+                </li>
+            </ul>
+            <center>
+            <div class="cadastro-funcoes-cargo-funcionario" id="cadastro-funcoes-cargo-funcionario">
+                <div class="cargos-area-modal">
+                    <h3>Cargos</h3>
+                    <input type="text" id="cargos-select-input"><span class="circle-btn" id="add-cargo-funcionario-btn">+</span><br>
+                    <div class="cargos-box-area" id="cargos-box-area">
+
+                    </div>
+                </div>
+                <div class="funcoes-area-modal">
+                    <h3>Funções</h3>
+                    <input type="text" id="funcoes-select-input"><span class="circle-btn" id="add-funcoes-funcionario-btn">+</span><br>
+                    <div class="funcoes-box-area" id="funcoes-box-area">
+
+                    </div>
+                </div>
+            </div>
+            </center>
+            <div class="cadastro-atribuicoes-funcionario-area">
+                <h3>Atribuições</h3>
+                <ul class="btn-ul">
+                    <li><textarea placeholder="Digite a atribuição aqui..." id="cadastrar-atribuicao-funcionario-input"></textarea></li>
+                    <li><div class="cadastrar-atribuicao-funcionario-btn" id="cadastrar-atribuicao-funcionario-btn">Cadastrar Atribuição</div></li>
+                </ul>
+                <div class="atribuicao-lista-area" id="atribuicao-lista-area">
+
+                </div>
+            </div>
+            <center>
+            <div class="cadastro-salario-funcionario-modal">
+                <h3>Salário</h3>
+                <ul class="cadastro-salario-funcionario-ul">
+                    <li>
+                        <input type="number" name="" id="cadastro-salario-funcionario-input">
+                    </li>
+                    <li>
+                        <select name="" id="cadastro-modalidade-salario-funcionario-input">
+                            <option value="mes">p/Mês</option>
+                            <option value="hora">p/Hora</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            </center>
+            <div class="cadastro-empresas-funcionario-modal" id="cadastro-empresas-funcionario-modal">
+                <h3>Empresas</h3>
+                <select id="empresas-select-input"><option value="null">--Selecione uma Empresa--</option></select><span class="circle-btn" id="add-empresas-funcionario-btn">+</span><br>
+                <div class="empresas-box-area" id="empresas-box-area">
+                    
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
