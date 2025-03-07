@@ -693,3 +693,30 @@ document.getElementById('criar-departamento-btn').addEventListener('click', () =
             })
         }
     })
+
+//Visualizar Empresas Area
+function carregarEmpresas(){
+    const empresasRef = ref(database, 'testeEmpresa/empresas/')
+    get(empresasRef).then((snapshot)=>{
+        const data = snapshot.val()
+
+        if(data){
+            Object.values(data).forEach((empresa)=>{
+                console.log(empresa)
+                document.getElementById("lista-empresa-empresa-area").innerHTML += `
+                                    <ul class="empresa-ul">
+                    <li><div class="empresa-foto" style="background-image: url(${empresa.foto})"></div></li>
+                    <li><p class="nome-empresa">${empresa.razaoSocial}</p></li>
+                    <li><p class="cnpj-empresa">${empresa.cnpj}</p></li>
+                    <li><div class="edit-btn"></div></li>
+                    <li><div class="remove-btn"></div></li>
+                </ul>
+            </div>
+                
+                `
+            
+            })
+        }
+    })}
+
+    carregarEmpresas()

@@ -35,7 +35,7 @@ body{
 
 /* Cadastro de Competências Area */
 .cadastro-competencias-area{
-    display: block;
+    display: none;
 }
 
 .cadastro-competencias-area .ul-title{
@@ -513,7 +513,7 @@ body{
 
 /* Cadastro de Funcionário Area */
 .cadastro-funcionario-area{
-    display: none;
+    display: block;
 }
 
 .cadastro-funcionario-area .ul-btn{
@@ -790,3 +790,12 @@ body{
 }
 
 /*-----------------------------*/
+
+/* Empresas Area */
+
+.empresas-area{
+    padding: 2rem;
+    display: none;
+}
+
+/* ------------ */

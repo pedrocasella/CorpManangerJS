@@ -43,8 +43,13 @@ function calculateAge(dateString) {
     return { years, totalDays };
   }
   
-  const age = calculateAge('2003-05-10');
-  console.log(`Anos: ${age.years}, Dias: ${age.totalDays}`);
+//Fechar Modais
+document.getElementById('black-background').addEventListener('click', (e)=>{
+  if(e.target.id == 'black-background' || e.target.id == 'close-modal'){
+    document.getElementById('black-background').style.display = 'none'
+    document.getElementById('avaliacao-competencias-funcionario-modal').style.display = 'none'
+  }
+})
   
   
 //Painel de Dados do Funcionáro
@@ -102,7 +107,7 @@ function calculateAge(dateString) {
         }
     })
 
-    //Carrega gráfico com as competências
+    //Carrega gráfico com as competências (Radar)
     function gerarGraficoRadar(labels, valores) {
       const ctx = document.getElementById('graficoRadar').getContext('2d');
       new Chart(ctx, {
@@ -131,30 +136,43 @@ function calculateAge(dateString) {
   }
 
   async function carregarCompetencias() {
-      const competenciasRef = ref(database, 'testeEmpresa/competencias');
+    const competenciasRef = ref(database, 'testeEmpresa/competencias');
+    const funcionarioRef = ref(database, 'testeEmpresa/funcionarios/-OKbJfv4eLzzz95tNiuq');
 
-      try {
-          const snapshot = await get(competenciasRef);
-          if (!snapshot.exists()) return;
+    try {
+        // Buscar as competências
+        const competenciasSnapshot = await get(competenciasRef);
+        if (!competenciasSnapshot.exists()) return;
+        const competencias = competenciasSnapshot.val();
 
-          const competencias = snapshot.val();
-          let labels = [];
-          let valores = [];
+        // Buscar os dados do funcionário
+        const funcionarioSnapshot = await get(funcionarioRef);
+        if (!funcionarioSnapshot.exists()) return;
+        const funcionario = funcionarioSnapshot.val();
 
-          Object.values(competencias).forEach(comp => {
-              labels.push(comp.nome);
-              valores.push(Math.floor(Math.random() * 100)); // Gera valores aleatórios entre 0 e 100
-          });
+        // Labels e valores das competências
+        let labels = [];
+        let valores = [];
 
-          gerarGraficoRadar(labels, valores);
-          gerarGraficoBarras(labels, valores);
-      } catch (error) {
-          console.error("Erro ao buscar dados do Firebase:", error);
-      }
+        Object.values(competencias).forEach(comp => {
+            labels.push(comp.nome);
+            
+            // Pegando o valor da competência do funcionário ou atribuindo 0
+            const valor = funcionario.valorCompetencias?.[comp.nome] ?? 0;
+            valores.push(valor);
+        });
+
+        // Gerar gráficos com os dados do funcionário
+        gerarGraficoRadar(labels, valores);
+        gerarGraficoBarras(labels, valores);
+    } catch (error) {
+        console.error("Erro ao buscar dados do Firebase:", error);
+    }
   }
 
   carregarCompetencias();
 
+  //Gráfico de Barras
   function gerarGraficoBarras(labels, valores) {
     const ctx = document.getElementById('graficoBarras').getContext('2d');
     new Chart(ctx, {
@@ -182,3 +200,53 @@ function calculateAge(dateString) {
         }
     });
 }
+
+  //Painel de Avaliação do Funcionário
+  
+  const competenciasRef = ref(database, 'testeEmpresa/competencias');
+  get(competenciasRef).then((snapshot)=>{
+    const data = snapshot.val()
+
+    if(data){
+      Object.values(data).forEach((competencia)=>{
+        document.getElementById('avaliacao-competencias-competencias-lista').innerHTML += `
+                                <ul class="competencias-ul">
+                        <li><p class="title">${competencia.nome}</p></li>
+                        <li><input type="number" value="0"></li>
+                    </ul><br>
+        
+        `
+      })
+    }
+  })
+
+  //Avalia Funcionário
+  document.getElementById('avaliacao-competencias-funcionario-btn').addEventListener('click', async () => {
+    const funcionarioRef = ref(database, 'testeEmpresa/funcionarios/-OKbJfv4eLzzz95tNiuq');
+    
+    try {
+        // Buscar os dados do funcionário
+        const snapshot = await get(funcionarioRef);
+        if (!snapshot.exists()) return;
+        const funcionario = snapshot.val();
+
+        // Criar um objeto para armazenar as notas
+        let valorCompetencias = funcionario.valorCompetencias || {};
+
+        // Percorrer os inputs e capturar os valores digitados
+        document.querySelectorAll('.competencias-ul').forEach(competenciaElement => {
+            const nomeCompetencia = competenciaElement.querySelector('.title').innerText;
+            const valor = parseInt(competenciaElement.querySelector('input').value) || 0;
+            
+            // Atualizar a nota da competência no objeto
+            valorCompetencias[nomeCompetencia] = valor;
+        });
+
+        // Atualizar o Firebase com os novos valores
+        await update(funcionarioRef, { valorCompetencias });
+
+        alert('Avaliação salva com sucesso!');
+    } catch (error) {
+        console.error("Erro ao atualizar as competências:", error);
+    }
+});
